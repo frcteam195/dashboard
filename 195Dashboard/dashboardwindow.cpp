@@ -104,10 +104,22 @@ void DashboardWindow::recieve_packet( char* buffer_in, int num_bytes )
 
         if( msg == "/RobotPose")
         {
-            std::cout << args.float32() << " "
-                      << args.float32() << " "
-                      << args.float32() << " "
-                      << "\n";
+            robot_x = args.float32();
+            robot_y = args.float32();
+            robot_z = args.float32();
+
+            robot_qx = args.float32();
+            robot_qy = args.float32();
+            robot_qz = args.float32();
+            robot_qw = args.float32();
+
+            robot_vx = args.float32();
+            robot_vy = args.float32();
+            robot_vz = args.float32();
+
+            robot_vx_linear = args.float32();
+            robot_vy_linear = args.float32();
+            robot_vz_linear = args.float32();
         }
 
     }
